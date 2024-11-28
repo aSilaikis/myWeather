@@ -8,18 +8,12 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const allowedOrigins = [
-  'http://localhost:3000',
-  process.env.CORS_ORIGIN
+  'https://my-weather-frontend.vercel.app',
+  process.env.CORS_ORIGIN,
 ];
 
 const corsOptions = {
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: allowedOrigins,
   methods: ['GET', 'POST'],
   credentials: true,
 };
