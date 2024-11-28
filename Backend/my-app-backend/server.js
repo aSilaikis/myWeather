@@ -21,6 +21,10 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
+app.get('/', (req, res) => {
+    res.send('Server is running!');
+});
+
 app.use('/api', weatherRoutes);
 
 app.listen(port, () => {
