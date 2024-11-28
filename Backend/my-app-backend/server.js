@@ -8,7 +8,6 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const allowedOrigins = [
-  'https://my-weather-frontend.vercel.app',
   process.env.CORS_ORIGIN,
 ];
 
