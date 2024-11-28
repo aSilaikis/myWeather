@@ -1,0 +1,26 @@
+# Root-level ignores
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Frontend-specific ignores
+/frontend/my-app-frontend/node_modules
+/frontend/my-app-frontend/.pnp
+/frontend/my-app-frontend/.pnp.js
+/frontend/my-app-frontend/coverage
+/frontend/my-app-frontend/build
+
+# Backend-specific ignores
+/backend/my-app-backend/node_modules
+/backend/my-app-backend/.pnp
+/backend/my-app-backend/.pnp.js
+/backend/my-app-backend/coverage
+/backend/my-app-backend/build
