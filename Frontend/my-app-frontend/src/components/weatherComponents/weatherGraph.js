@@ -16,7 +16,7 @@ export default function WeatherGraph({ weather, selectedDay, selectedData, isDar
                 <div className={`p-3 rounded-lg shadow-lg border ${
                     isDarkMode ? 'bg-gray-800 border-gray-600 text-gray-200' : 'bg-white border-gray-300 text-gray-800'
                 }`}>
-                    <p className="font-semibold">{label}:00</p>
+                    <p className="font-semibold">{label}</p>
                     <p style={{ color: data.color }}>
                         {data.name}: {data.value.toFixed(2)}{' '}
                         {selectedData === 'temp'
@@ -32,13 +32,16 @@ export default function WeatherGraph({ weather, selectedDay, selectedData, isDar
     };
 
     return (
-        <div className="h-[350px] w-full">
-            <ResponsiveContainer width="97%" height={350}>
+        <div className="h-[350px] w-full sm:h-[250px] md:h-[400px] lg:h-[500px]">
+            <ResponsiveContainer 
+                width="100%" 
+                height="100%" 
+                className="sm:w-[90%] md:w-[95%] lg:w-full"
+            >
                 <LineChart data={weather.forecast[selectedDay].hourly}>
                     <CartesianGrid strokeDasharray="3 3" stroke={isDarkMode ? '#4B5563' : '#E5E7EB'} />
                     <XAxis
                         dataKey="time"
-                        tickFormatter={(time) => time + ':00'}
                         tick={{ fill: isDarkMode ? '#D1D5DB' : '#4B5563', fontSize: 12 }}
                         stroke={isDarkMode ? '#6B7280' : '#9CA3AF'}
                     />

@@ -77,8 +77,12 @@ const getWeather = async (req, res) => {
         month: 'numeric',
         day: 'numeric',
       });
-      const time = adjustTimezone(item.dt).getTime();
-
+      const time = adjustTimezone(item.dt).toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+      });
+    
       if (!acc[date]) {
         acc[date] = {
           temps: [],
@@ -88,22 +92,19 @@ const getWeather = async (req, res) => {
           hourly: [],
         };
       }
-
+    
       acc[date].temps.push(item.main.temp);
       acc[date].descriptions.push(item.weather[0].description);
       acc[date].icons.push(item.weather[0].icon);
       acc[date].humidity.push(item.main.humidity);
       acc[date].hourly.push({
-        time: adjustTimezone(time).toLocaleTimeString('en-US', {
-          hour: 'numeric',
-          hour12: false,
-        }),
+        time: time,
         temp: item.main.temp,
         humidity: item.main.humidity,
         rain: item.rain?.['3h'] || 0,
         snow: item.snow?.['3h'] || 0,
       });
-
+    
       return acc;
     }, {});
 
