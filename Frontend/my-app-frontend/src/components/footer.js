@@ -46,7 +46,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Follow Me</h3>
                         <div className="flex space-x-4">
-                            <a href="https://github.com/Krybas" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                            <a href="https://github.com/aSilaikis" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                                 <Github className="w-8 h-8 hover:w-9 hover:h-9" />
                                 <span className="sr-only">GitHub</span>
                             </a>
@@ -54,7 +54,7 @@ const Footer = () => {
                                 <Instagram className="w-8 h-8 hover:w-9 hover:h-9" />
                                 <span className="sr-only">Instagram</span>
                             </a>
-                            <a href="https://www.linkedin.com/in/arnas-š" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                            <a href="https://www.linkedin.com/in/arnas-silaikis" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                                 <Linkedin className="w-8 h-8 hover:w-9 hover:h-9" />
                                 <span className="sr-only">LinkedIn</span>
                             </a>
